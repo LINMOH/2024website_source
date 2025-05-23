@@ -1,0 +1,148 @@
+- class_name: 网站的搭建，离不开这些工具：
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-tw/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网志框架
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://butterfly.js.org/img/butterfly-icon.png
+      descr: A Simple and Card UI Design theme for Hexo.
+
+- class_name: 大佬博客
+  class_desc: 听君一席话，胜读十年书。
+  link_list:
+    - name: 阮一峰的网络日志
+      link: https://www.ruanyifeng.com/
+      avatar: 
+      descr: 这里记录每周值得分享的科技内容
+
+- class_name: 友情链接
+  class_desc: 常来玩哦~
+  link_list:
+    - name: ZHWEI's Blog 
+      link: https://blog.zhwei101.com/
+      avatar: https://blog.zhwei101.com/upload/logo.png
+      descr: 一个牛逼的博客~
+    - name: Mashiro
+      link: https://2heng.xin
+      avatar: https://view.moezx.cc/images/2018/03/27/avatar.jpg
+      descr: 樱花庄的白猫
+    - name: June's Blog
+      link: https://blog.june-pj.cn/
+      avatar: https://gitlab.com/June_PJ/PicGo-PJ/raw/main/img/avatar.webp
+      descr: 遇事不决，可问春风
+      siteshot: https://gitlab.com/June_PJ/PicGo-PJ/raw/main/img/siteshot.webp
+    - name: s1rius' blog
+      link: https://s1rius.space/
+      avatar: https://s1rius.space/img/custom/avatar.webp
+      descr: 这里有网络安全和其他技术文章
+      siteshot: https://s1rius.space/img/custom/siteshot.webp
+    - name: 枫叶
+      link: https://blog.aqcoder.cn
+      avatar: https://blog.aqcoder.cn/img/avatar.png
+      descr: 分享知识，认识世界
+    - name: Leonus
+      link: https://blog.leonus.cn/
+      avatar: https://q1.qlogo.cn/g?b=qq&nk=990320751&s=5
+      descr: 进一寸有进一寸的欢喜。
+    - name: ichika
+      link: https://ichika.cc
+      avatar: https://cdn.ichika.cc/page/HeadIcon.jpg
+      descr: Hello,gamer!
+    - name: 寻梦城
+      link: https://blog.study996.cn/
+      descr: 欲买桂花同载酒，终不似，少年游
+      avatar: https://q2.qlogo.cn/headimg_dl?dst_uin=2071916845&spec=640 
+    - name: 皮普的数字花园
+      link: https://pipuwong.com
+      descr: 设计/摄影/代码/NAS
+      avatar: https://gravatar.pipuwong.com/avatar/d3af34e32b9a018ed5b467d63beac3ed?size=512
+    - name: 悦己
+      link: http://www.yveji.com
+      descr: Read Oneself，Transcend Oneself，Delight in Oneself
+      avatar: http://www.yveji.com/vis/yveji_logo.png
+    - name: 闪闪の小窝
+      link: https://moechun.fun/
+      descr: 来玩！玩累了…就睡觉！没问题的！
+      avatar: https://moechun.fun/img/avatar/hanajiang-2.png
+    - name: 网安冷墨寒
+      link: https://www.ink0.cn
+      descr: Flag 是全世界！
+      avatar: https://www.ink0.cn/wp-content/uploads/2023/10/173bd187c460bff965c694-scaled.jpg
+    - name: 大壮博客
+      link: https://www.lishoujie.cn
+      descr: 末日未来临，上帝不审人。
+      avatar: https://www.lishoujie.cn/static/images/logo.png
+    - name: 清羽飞扬
+      link: https://blog.liushen.fun/
+      avatar: https://blog.liushen.fun/info/avatar.ico
+      descr: 柳影曳曳，清酒孤灯，扬笔撒墨，心境如霜
+    - name: 猫不吃鱼.
+      link: https://starsei.com/
+      avatar: https://starsei.com/favicon.ico
+      descr: 雾散处，玫瑰花开
+    - name: HiPeach
+      link: https://blog.opeach.cn
+      avatar: https://npm.elemecdn.com/opicture@1.0.0/main/avatar.webp
+      descr: 妙不可言
+    - name: 伍拾柒
+      link: https://efu.me/
+      avatar: https://cdn.lightxi.com/cloudreve/uploads/2025/02/14/yY8tgUJU_891fe376065dc8b9eacecfde3b6b6e8f.jpg
+      descr: 
+    - name: Jerry Zhou
+      link: https://blog.jerryz.com.cn/
+      avatar: https://img.examcoo.com/ask/7386438/202111/163626915705190.jpg
+      descr: 永远相信美好的事情即将发生
+    - name: 無名小栈
+      descr: 分享技术与科技生活
+      url: https://blog.imsyy.top/
+      avatar: https://pic.imgdb.cn/item/65bc52b0871b83018a06699d.png
+    - name: gorpeln的个人博客
+      descr: 趁年轻，做自己想做的！
+      url: https://gorpeln.top
+      avatar: https://gorpeln.top/favicon.ico
+    - name: 青稚の空间
+      link: https://blog.linux-qitong.top
+      avatar: https://blog.linux-qitong.top/img/avatar.webp
+      descr: 越努力，越幸运.
+    - name: 冬天的小窝
+      link: https://www.iamdt.cn/
+      avatar: https://s1.ax1x.com/2022/07/04/jJlQ1K.pngr.webp
+      descr: 人生若只如初见，何事秋风悲画扇。
+    - name: 百里飞洋の博客
+      link: https://blog.meta-code.top/
+      avatar: https://avatars.githubusercontent.com/u/81922999?v=4 
+      descr: 星河滚烫，无问西东。
+    - name: 爱吃肉的猫
+      link: https://meuicat.com/
+      avatar: https://bu.dusays.com/2023/08/25/64e8ca25e89c5.jpg
+      descr: 有肉有猫有生活.
+    - name: 小植同学
+      link: https://blog.xiaoztx.top
+      avatar: https://blog.xiaoztx.top/img/xiaozhi.jpg
+      descr: 锦鲤相随，好运常伴
+    - name: 呆鱼
+      link: https://daiyu.fun/
+      avatar: https://daiyu.fun/img/avatar.png
+      descr: Hello World！
+      screenshot: https://daiyu.fun/img/screenshot.png
+    - name: 小赵の破宅
+      link: https://blog.zhaoziyi.site
+      avatar: https://blog.zhaoziyi.site/images/avatar.jpg
+      descr: 生数理化生一塌糊涂的理科生，对兴趣情有独钟的追寻！
+      siteshot: https://s1.ax1x.com/2023/07/21/pCHL8zj.png
+
+- class_name: 我负责搭建的项目
+  link_list:
+    - name: 玉口骏马
+      link: https://pingyinshigao.icu/
+      avatar: https://s1.imagehub.cc/images/2025/05/01/c80e643087892be8a9f6b125b28a6b41.md.jpg
+      descr: 做一个读书、自我提升的老师，用心陪伴学生们成长；做一个用心经营亲子关系的父亲，用真爱行走在陪伴的岁月里！
+
+- class_name: 我的网站
+  link_list:
+    - name: 个人导航
+      link: https://map.linmohan.fun/
+      avatar: hhttps://linmohan.fun/img/favicon.png
+      descr: 我的个人网站导航页
