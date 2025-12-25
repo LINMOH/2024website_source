@@ -1,0 +1,303 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>算法学习专栏总序 | 技研录</title><meta name="author" content="林墨瀚"><meta name="copyright" content="林墨瀚"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="算法自学笔记专栏总序 欢迎来到我的《算法自学笔记》专栏！这是我在自学算法过程中的一个学习日志，旨在记录并分享我对常见算法和数据结构的理解、学习过程中的思考以及探索到的有用资源。我希望通过这个专栏，能帮助自己更好地总结学习成果，同时为其他对算法感兴趣的同学提供一些启发和参考。  专栏内容概览 本专栏将涵盖以下几个主要方面：  基本数据结构：包括数组、链表、栈、队列、哈希表、树、图等常见数据结构。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法学习专栏总序">
+<meta property="og:url" content="https://linmoh.github.io/2024website/2025/01/21/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F/index.html">
+<meta property="og:site_name" content="技研录">
+<meta property="og:description" content="算法自学笔记专栏总序 欢迎来到我的《算法自学笔记》专栏！这是我在自学算法过程中的一个学习日志，旨在记录并分享我对常见算法和数据结构的理解、学习过程中的思考以及探索到的有用资源。我希望通过这个专栏，能帮助自己更好地总结学习成果，同时为其他对算法感兴趣的同学提供一些启发和参考。  专栏内容概览 本专栏将涵盖以下几个主要方面：  基本数据结构：包括数组、链表、栈、队列、哈希表、树、图等常见数据结构。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://linmoh.github.io/2024website/img/top/11.png">
+<meta property="article:published_time" content="2025-01-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-11T05:42:48.000Z">
+<meta property="article:author" content="林墨瀚">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linmoh.github.io/2024website/img/top/11.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "算法学习专栏总序",
+  "url": "https://linmoh.github.io/2024website/2025/01/21/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F/",
+  "image": "https://linmoh.github.io/2024website/img/top/11.png",
+  "datePublished": "2025-01-20T16:00:00.000Z",
+  "dateModified": "2025-03-11T05:42:48.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "林墨瀚",
+      "url": "https://home.linmohan.fun/ziwojieshao/main.html"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/2024website/img/favicon.png"><link rel="canonical" href="https://linmoh.github.io/2024website/2025/01/21/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/2024website/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-FK40WW6GMW"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-FK40WW6GMW')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-FK40WW6GMW', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/2024website/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":10,"languages":{"author":"作者: 林墨瀚","link":"链接: ","source":"来源: 技研录","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'Medium Zoom',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '算法学习专栏总序',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/2024website/atom.xml" title="技研录" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="site-data text-center"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/img/top/4.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/2024website/"><span class="site-name">技研录</span></a><a class="nav-page-title" href="/2024website/"><span class="site-name">算法学习专栏总序</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">算法学习专栏总序</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-01-20T16:00:00.000Z" title="发表于 2025-01-21 00:00:00">2025-01-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-11T05:42:48.000Z" title="更新于 2025-03-11 13:42:48">2025-03-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/2024website/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/">算法学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div id="post-outdate-notice" data="{&quot;limitDay&quot;:180,&quot;messagePrev&quot;:&quot;自上次更新,已经过了&quot;,&quot;messageNext&quot;:&quot;天，文章内容可能已过时,但是仍具有参考价值。&quot;,&quot;postUpdate&quot;:&quot;2025-03-11 13:42:48&quot;}" hidden></div><h1 id="算法自学笔记专栏总序"><a class="markdownIt-Anchor" href="#算法自学笔记专栏总序"></a> 算法自学笔记专栏总序</h1>
+<p>欢迎来到我的《算法自学笔记》专栏！这是我在自学算法过程中的一个学习日志，旨在记录并分享我对常见算法和数据结构的理解、学习过程中的思考以及探索到的有用资源。我希望通过这个专栏，能帮助自己更好地总结学习成果，同时为其他对算法感兴趣的同学提供一些启发和参考。</p>
+<h2 id="专栏内容概览"><a class="markdownIt-Anchor" href="#专栏内容概览"></a> 专栏内容概览</h2>
+<p>本专栏将涵盖以下几个主要方面：</p>
+<ul>
+<li><strong>基本数据结构</strong>：包括数组、链表、栈、队列、哈希表、树、图等常见数据结构。</li>
+<li><strong>排序与查找算法</strong>：涉及快速排序、归并排序、二分查找、线性查找等常用算法。</li>
+<li><strong>动态规划</strong>：深入讲解背包问题、最短路径问题、最长公共子序列等经典问题的解法。</li>
+<li><strong>图算法</strong>：介绍深度优先搜索、广度优先搜索、最小生成树、最短路径等图相关算法。</li>
+<li><strong>其他算法</strong>：包括贪心算法、回溯算法、分治算法等常见的高级算法。</li>
+</ul>
+<h2 id="专栏目标"><a class="markdownIt-Anchor" href="#专栏目标"></a> 专栏目标</h2>
+<ul>
+<li><strong>整理学习笔记</strong>：将学习过程中遇到的关键点、算法实现和常见问题进行总结，并加以归纳整理。</li>
+<li><strong>分享学习经验</strong>：记录并分享自己的自学心得，帮助更多对算法感兴趣的学习者更高效地入门和进阶。</li>
+<li><strong>持续更新</strong>：随着学习的深入，我将持续更新专栏内容，不断补充新的算法和数据结构，力求使本专栏内容更加丰富和完善。</li>
+</ul>
+<h2 id="专栏发展方向"><a class="markdownIt-Anchor" href="#专栏发展方向"></a> 专栏发展方向</h2>
+<p>目前，我已完成了常见数据结构和部分经典算法的学习笔记。未来，我会继续扩展更深入的算法和数据结构内容，并根据实践经验不断优化和完善笔记。</p>
+<p>此外，专栏的配套网站也在开发中，未来将提供更加直观的学习资料，并结合在线编程和算法演示，进一步增强互动性和学习体验。</p>
+<h2 id="如何使用本专栏"><a class="markdownIt-Anchor" href="#如何使用本专栏"></a> 如何使用本专栏</h2>
+<p><a target="_blank" rel="noopener" href="https://github.com/LINMOH/self-study-notes-on-algo">仓库地址</a></p>
+<ul>
+<li><strong>浏览笔记</strong>：可以随时浏览并参考专栏中的各类学习笔记，帮助你理解算法的核心思想及其实现方式。</li>
+<li><strong>贡献代码</strong>：如果你在某个算法或数据结构上有新的见解或改进，欢迎通过提交 Pull Request 参与贡献。</li>
+<li><strong>参与讨论</strong>：如果你在学习过程中有问题或想法，可以在 Issues 区域提出，我们一起讨论、解决。</li>
+</ul>
+<h2 id="关于我"><a class="markdownIt-Anchor" href="#关于我"></a> 关于我</h2>
+<h3 id="我的背景"><a class="markdownIt-Anchor" href="#我的背景"></a> 我的背景</h3>
+<p>我是一个初二学生，虽然算法学习起步较晚，但我一直对编程和算法充满浓厚兴趣。如今，我正通过自学不断提升自己的算法水平，并希望能通过实践提升自己的编程能力。</p>
+<h3 id="为什么专注算法学习"><a class="markdownIt-Anchor" href="#为什么专注算法学习"></a> 为什么专注算法学习</h3>
+<p>在我的学习经历中，我曾对编程语言产生浓厚兴趣，并开始尝试学习一些编程语言。然而，老师建议我先专注于算法学习，因为掌握算法的核心思维将帮助我更好地理解编程语言的底层原理。因此，我决定将语言学习暂时搁置，集中精力攻克算法，培养扎实的逻辑思维能力。这一决定，也为我后续的编程之路打下了坚实的基础。</p>
+<h3 id="我的目标"><a class="markdownIt-Anchor" href="#我的目标"></a> 我的目标</h3>
+<p>我的目标是通过不断学习算法和数据结构，在信息奥赛（NOI）中争取获得省赛一等奖。我相信，通过扎实的算法基础，不仅能提升我的编程水平，也能帮助我在将来的编程竞赛中脱颖而出。</p>
+<h2 id="学习资源与参考资料"><a class="markdownIt-Anchor" href="#学习资源与参考资料"></a> 学习资源与参考资料</h2>
+<p>在这条自学算法的道路上，我参考了以下书籍和资料：</p>
+<ul>
+<li>《hello 算法》：为初学者提供了很多实用的算法学习资料和代码示例，帮助我从零基础入门。</li>
+<li>CS自学指南：为自学计算机科学的学生提供了清晰的学习路径，帮助我规划和组织学习内容。</li>
+<li>HackWay技术学习路线：提供了从入门到进阶的技术学习路线，帮助我更系统地提升技能。</li>
+<li>《算法基础：打开算法之门》：为算法入门提供了详细的讲解，帮助我理解基础概念。</li>
+<li>《算法导论》：经典教材，深入探讨了算法设计和分析，是我的重要参考书。</li>
+<li>《数据结构、算法与应用：C<ins>语言描述》：结合C</ins>语言讲解数据结构和算法的实现，帮助我理解实际应用。</li>
+</ul>
+<h2 id="许可证"><a class="markdownIt-Anchor" href="#许可证"></a> 许可证</h2>
+<p>此专栏内容采用 CC BY-NC-SA 4.0 许可证，您可以在非商业用途下使用和分享本专栏的内容，但需要注明出处，并且分享的内容须遵循相同的许可协议。</p>
+<h2 id="致谢"><a class="markdownIt-Anchor" href="#致谢"></a> 致谢</h2>
+<p>特别感谢所有在算法和编程领域做出贡献的前辈，正是因为有了他们的知识和经验，我们这些自学者才能更容易获得进步。希望通过我的努力，这些宝贵的知识能帮助更多的学习者。</p>
+<p>这是我自学算法过程中的一个小小总结和记录，希望你在这个专栏中能收获知识与灵感。欢迎你在学习中提出建议，或者与我共同探讨算法的奥妙！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a target="_blank" rel="noopener" href="https://home.linmohan.fun/ziwojieshao/main.html">林墨瀚</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://linmoh.github.io/2024website/2025/01/21/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F/">https://linmoh.github.io/2024website/2025/01/21/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://linmoh.github.io/2024website" target="_blank">技研录</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/2024website/img/top/11.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>感谢你的支持 ❤️</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/2024website/img/wachatPayQR.jpg" target="_blank"><img class="post-qr-code-img" src="/2024website/null"/></a><div class="post-qr-code-desc"></div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2024website/2025/01/21/Hello%E7%AE%97%E6%B3%95%E7%AC%AC%E4%B8%80%E7%AB%A0%E5%88%9D%E8%AF%86%E7%AE%97%E6%B3%95/" title="《Hello 算法》第二章·算法复杂度"><img class="cover" src="/2024website/img/top/8.png" onerror="onerror=null;src='/2024website/img/friend_404.jpeg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">《Hello 算法》第二章·算法复杂度</div></div><div class="info-2"><div class="info-item-1"> 《Hello 算法》第一章 · 初识算法  算法  算法定义 算法（algorithm）是指在有限时间内通过一组明确的步骤或指令来解决特定问题的过程。它具有以下基本特性：  明确性：问题及其输入输出是清晰定义的，确保在不同的执行环境下可以得到一致的结果。 可行性：算法能够在有限的步骤、时间和内存空间内完成，保证其可以在实际系统中执行。 确定性：每个步骤有清晰的定义，并且在相同的输入和运行条件下，算法的输出始终一致，避免了不确定性和随机性。 最优性：在满足问题要求的前提下，算法能够实现最高效的执行，例如最短的时间复杂度和最少的空间消耗。  实例：  排序算法，如冒泡排序（Bubble Sort）和快速排序（Quick Sort），用于将一组无序数据排列为有序数据。快速排序通常被认为是最优的，因为它的平均时间复杂度是 O(n log n)，而冒泡排序的时间复杂度是 O(n²)。   算法复杂度 算法复杂度（algorithm...</div></div></div></a><a class="pagination-related" href="/2024website/2025/02/01/Hello%E7%AE%97%E6%B3%95%E7%AC%AC%E4%BA%8C%E7%AB%A0%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/" title="《Hello 算法》第二章·算法复杂度"><img class="cover" src="/2024website/img/top/12.png" onerror="onerror=null;src='/2024website/img/friend_404.jpeg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">《Hello 算法》第二章·算法复杂度</div></div><div class="info-2"><div class="info-item-1"> 《Hello 算法》第二章 · 算法复杂度 当我们提到算法复杂度时，可以把它当作衡量完成一项任务效率的标准。想象你和朋友一起比赛，看谁能更快地完成整理书架的任务。你们有两种不同的做法，最终谁更快完成任务，谁就是胜利者。通过算法复杂度，我们能够评估不同方法在完成任务时的效率，帮助我们在各种情况下选择最佳的方案。  时间复杂度：任务做得有多快？ 时间复杂度就像是完成任务所需要的时间。假设你有100本书要整理，每次拿一本书，你都需要检查它放对了没，直到所有书都摆放好了。那么，整理书架的时间就跟书的数量成正比。  在计算机科学中，算法的时间复杂度通过大O符号表示，用来描述算法的运行时间随输入值大小的变化趋势。它通常忽略低阶项和系数，只关注输入规模趋近无穷时的表现。时间复杂度常用来衡量算法在最坏情况下的执行时间，也可用来分析平均情况。通过估算算法操作单元的数量来计算时间复杂度，常见的分类包括线性时间算法（O(n)）和指数时间算法（O(Mn)）。（总结自Wikipedia）   常见的时间复杂度  O(1) —...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="author-info-name">林墨瀚</div><div class="author-info-description">「代码重构世界，逻辑解构真理」</div><div class="site-data"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LINMOH"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/LINMOH" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:linmhwork@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://user.qzone.qq.com/2113836986" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://space.bilibili.com/2126856300" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #hdhfbb;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🚚 网站迁移公告<br /> 亲爱的读者：<br /> 本站正在迁移至新框架，文章和评论数据同步中，部分内容可能暂时无法访问。<br /> ⏳ 预计一周内完成全部迁移，如有异常请通过 📧 邮箱反馈。<br /> 感谢你的理解与支持！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%E8%87%AA%E5%AD%A6%E7%AC%94%E8%AE%B0%E4%B8%93%E6%A0%8F%E6%80%BB%E5%BA%8F"><span class="toc-number">1.</span> <span class="toc-text"> 算法自学笔记专栏总序</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%93%E6%A0%8F%E5%86%85%E5%AE%B9%E6%A6%82%E8%A7%88"><span class="toc-number">1.1.</span> <span class="toc-text"> 专栏内容概览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%93%E6%A0%8F%E7%9B%AE%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text"> 专栏目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%93%E6%A0%8F%E5%8F%91%E5%B1%95%E6%96%B9%E5%90%91"><span class="toc-number">1.3.</span> <span class="toc-text"> 专栏发展方向</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%9C%AC%E4%B8%93%E6%A0%8F"><span class="toc-number">1.4.</span> <span class="toc-text"> 如何使用本专栏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91"><span class="toc-number">1.5.</span> <span class="toc-text"> 关于我</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E8%83%8C%E6%99%AF"><span class="toc-number">1.5.1.</span> <span class="toc-text"> 我的背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%93%E6%B3%A8%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0"><span class="toc-number">1.5.2.</span> <span class="toc-text"> 为什么专注算法学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="toc-number">1.5.3.</span> <span class="toc-text"> 我的目标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E4%B8%8E%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-number">1.6.</span> <span class="toc-text"> 学习资源与参考资料</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B8%E5%8F%AF%E8%AF%81"><span class="toc-number">1.7.</span> <span class="toc-text"> 许可证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2"><span class="toc-number">1.8.</span> <span class="toc-text"> 致谢</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="焦虑的夜。"/></a><div class="content"><a class="title" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。">焦虑的夜。</a><time datetime="2025-05-21T16:24:48.000Z" title="发表于 2025-05-22 00:24:48">2025-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报"><img src="/2024website/img/top/4.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="五月月报"/></a><div class="content"><a class="title" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报">五月月报</a><time datetime="2025-05-16T16:00:00.000Z" title="发表于 2025-05-17 00:00:00">2025-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型"><img src="/2024website/img/top/6.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="第一节课讲义：认识 C++ 输入输出与基本变量类型"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型">第一节课讲义：认识 C++ 输入输出与基本变量类型</a><time datetime="2025-04-25T10:40:44.000Z" title="发表于 2025-04-25 18:40:44">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形"><img src="/2024website/img/top/8.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="P5725 【深基4.习8】求三角形"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形">P5725 【深基4.习8】求三角形</a><time datetime="2025-04-24T16:00:00.000Z" title="发表于 2025-04-25 00:00:00">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="排列组合"/></a><div class="content"><a class="title" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合">排列组合</a><time datetime="2025-04-02T14:51:17.000Z" title="发表于 2025-04-02 22:51:17">2025-04-02</time></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347);"><div id="footer-wrap"><div class="copyright">&copy;2025 By 林墨瀚</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>鲁ICP备2025142864号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/2024website/js/utils.js"></script><script src="/2024website/js/main.js"></script><script src="/2024website/js/tw_cn.js"></script><script src="/2024website/"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (false) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: '',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: '',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

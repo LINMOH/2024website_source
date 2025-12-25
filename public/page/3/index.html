@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>技研录 - 林墨瀚の小站</title><meta name="author" content="林墨瀚"><meta name="copyright" content="林墨瀚"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="「代码重构世界，逻辑解构真理」">
+<meta property="og:type" content="website">
+<meta property="og:title" content="技研录">
+<meta property="og:url" content="https://linmoh.github.io/2024website/page/3/index.html">
+<meta property="og:site_name" content="技研录">
+<meta property="og:description" content="「代码重构世界，逻辑解构真理」">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://linmoh.github.io/2024website/img/touxiang.png">
+<meta property="article:author" content="林墨瀚">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linmoh.github.io/2024website/img/touxiang.png"><link rel="shortcut icon" href="/2024website/img/favicon.png"><link rel="canonical" href="https://linmoh.github.io/2024website/page/3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/2024website/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-FK40WW6GMW"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-FK40WW6GMW')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-FK40WW6GMW', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/2024website/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":10,"languages":{"author":"作者: 林墨瀚","link":"链接: ","source":"来源: 技研录","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'Medium Zoom',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '技研录',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/2024website/atom.xml" title="技研录" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="site-data text-center"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/index_img.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/2024website/"><span class="site-name">技研录</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">技研录</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/LINMOH" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:linmhwork@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://user.qzone.qq.com/2113836986" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://space.bilibili.com/2126856300" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #hdhfbb;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/03/04/P5711/" title="P5711 【深基3.例3】闰年判断">P5711 【深基3.例3】闰年判断</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-03T16:00:00.000Z" title="发表于 2025-03-04 00:00:00">2025-03-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E8%A7%A3%E9%A2%98%E6%89%8B%E8%AE%B0/">解题手记</a></span></div><div class="content"> P5711 【深基3.例3】闰年判断  题目  题目描述 输入一个年份，判断这一年是否是闰年，如果是输出 1，否则输出 0。 1582 年以来，闰年的定义：  普通闰年：公历年份是 4 的倍数，且不是 100 的倍数的，为闰年（如 2004 年、2020 年等就是闰年）。 世纪闰年：公历年份是整百数的，必须是 400 的倍数才是闰年（如 1900 年不是闰年，2000 年是闰年）。   输入格式 输入一个正整数 n，表示年份。  输出格式 输出一行。如果输入的年份是闰年则输出 1，否则输出 0。  输入输出样例  输入输出样例 #1 输入 #1 11926 输出 #1 10  输入输出样例 #2 输入 #2 11900 输出 #2 10  输入输出样例 #3 输入 #3 12000 输出 #3 11  输入输出样例 #4 输入 #4 11996 输出 #4 11  说明/提示 数据保证，1582 ≤ n ≤ 2020 且年份为自然数。  解题 12345678910111213141516171819#include &lt;iostream&gt;using...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/03/04/T392143%E6%B0%B4%E4%BB%99%E8%8A%B1%E6%95%B0/" title="T392143 水仙花数">T392143 水仙花数</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-03T16:00:00.000Z" title="发表于 2025-03-04 00:00:00">2025-03-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E8%A7%A3%E9%A2%98%E6%89%8B%E8%AE%B0/">解题手记</a></span></div><div class="content"> T392143 水仙花数  题目描述 在自然数中，如果一个三位数等于自身各位数字之立方和，则这个三位数就称为是水仙花数。如:153=1+125+27,所以153是一个水仙花数。求所有的水仙花数。  输入格式 无输入  输出格式 若干个空格间隔的由小到大表示的整数，每个表示一个水仙花数。  解题 是不是很熟悉？这道题就是《算法竞赛入门经典》的习题 2-1，改一个输出就行。 123456789101112131415161718#include&lt;iostream&gt;using namespace std;int main()&#123;    int a,b,c = 0;    for (int num = 100; num &lt;= 999; num++)    &#123;        a = num / 100;        b = (num / 10) % 10;        c = num % 10;        if (num == (a * a * a) + (b * b * b) + (c * c * c))        &#123;    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/03/03/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E7%AC%AC%E4%BA%8C%E7%AB%A0%E4%B9%A0%E9%A2%98%E8%A7%A3%E7%AD%94/" title="算法竞赛入门经典 第二章习题解答">算法竞赛入门经典 第二章习题解答</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-02T16:00:00.000Z" title="发表于 2025-03-03 00:00:00">2025-03-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法竞赛入门经典 第二章习题解答   习题 2-1 水仙花数（daffodil）  题目描述 输出 100～999 中的所有水仙花数。若 3 位数 ABC 满足 [ ABC = A^3 + B^3 + C^3 ] 则称其为水仙花数。例如 153= (13+53+3^3) ，所以 153 是水仙花数。  解答 123456789101112131415161718#include&lt;iostream&gt;using namespace std;int main()&#123;    int a, b, c = 0;    for (int num = 100; num &lt;= 999; num++)    &#123;        a = num / 100;        b = (num / 10) % 10;        c = num % 10;        if (num == (a * a * a) + (b * b * b) + (c * c * c))        &#123;            cout &lt;&lt; num...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/27/%E4%B9%A0%E9%A2%982-3/" title="算法入门经典 习题 2-3">算法入门经典 习题 2-3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-26T16:00:00.000Z" title="发表于 2025-02-27 00:00:00">2025-02-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 习题 2-3  题目 输入正整数 n≤20，输出一个 n 层的倒三角形。 例如，n＝5 时输出如下： 12345######### #######  #####   ###    #  解答 我们来分析一下：    行号 空格数 符号数 输出内容     0 0 9 #########   1 1 7 #######   2 2 5 #####   3 3 3 ###   4 4 1 #     初版（有 bug） 12345678910111213141516171819202122232425262728293031323334353637#include&lt;iostream&gt;using namespace std;int triangle(int a)&#123;    //a:层数    a = a * 2 - 1;    for (int i = 0; i &lt;= a; i = i + 2)    &#123;        //i:每行个数        int b = 0;        //添加空格        int j =...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/26/%E4%BE%8B%E9%A2%982-4/" title="算法入门经典 例题 2-4">算法入门经典 例题 2-4</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-25T16:00:00.000Z" title="发表于 2025-02-26 00:00:00">2025-02-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 2-4 访问量：31  题目 阶乘之和：输入 n，计算 S＝1！＋2！＋3！＋…＋n！的末 6 位（不含前导 0）。n≤106 ，n！表示前 n 个正整数之积。 样例输入： 110 样例输出： 137913  解答 这里应该用双层 for 循环，对于每个 i，乘每一个 j（如程序）。  初版（有 bug） 12345678910111213141516171819202122#include &lt;iostream&gt;using namespace std;int main()&#123;    int n;    int sum = 0;    cin &gt;&gt; n;    for (int i; i &lt;= n; i++)    &#123;        int a = 1;        for (int j; j &lt;= i; j++)        &#123;            a = i * j;            sum = sum + a;        &#125;    &#125;    sum =...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/26/%E6%9D%82%E8%B0%88NOI%E8%B7%AF%E7%BA%BF/" title="杂谈 NOI 路线">杂谈 NOI 路线</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-25T16:00:00.000Z" title="发表于 2025-02-26 00:00:00">2025-02-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%9D%82%E8%B0%88%E9%9B%86%E8%90%83/">杂谈集萃</a></span></div><div class="content"> 杂谈 NOI 路线 刷知乎无意间刷到问题如何看待《算法竞赛进阶指南》与《信息学奥赛一本通·提高篇》多页内容雷同，后者疑似抄袭？中，李煜东大佬推荐的学习流程竟然惊人的一致为了能帮助广大和我一样的苦命 OIer，特地转载一下：  OI / ICPC 入门到提高的话…… 我的建议是  买一本《C++ Primer Plus》（中文版就行），看前几章学语言（不用看面向对象之后的内容）。 买一本《算法竞赛入门经典》，学入门级别算法，上面也有一些语言的内容，所以 C++ Primer Plus 粗略地读就行了。 买一本《算法竞赛进阶指南》，提高算法和数据结构水平。 UPD：还有评论推荐《挑战程序设计竞赛》，不过我没读过…… 看作者应该还不错  之后就不用看书了，刷 OJ / 读论文 / 做 CF 等 Online Contest...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/25/%E4%BE%8B%E9%A2%982-2/" title="算法入门经典 例题 2-2">算法入门经典 例题 2-2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-24T16:00:00.000Z" title="发表于 2025-02-25 00:00:00">2025-02-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 2-2  题目 猜想：对于任意大于1的自然数n，若n为奇数，则将n变为3n＋1，否则变为n的一半。 经过若干次这样的变换，一定会使n变为1。例如，3→10→5→16→8→4→2→1。  解答 很简单的重复性程序，没什么技术含量。 12345678910111213141516171819202122232425262728#include &lt;iostream&gt;using namespace std;int main()&#123;    int n;    cin &gt;&gt; n;    int j = 0;    while (n &gt; 1)    &#123;        if (n % 2 == 1)        &#123;            j++;            n = 3 * n + 1;            continue;        &#125;        else        &#123;            j++;            n = n / 2;           ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/24/%E4%BE%8B%E9%A2%982-1/" title="算法入门经典 例题 2-1">算法入门经典 例题 2-1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-23T16:00:00.000Z" title="发表于 2025-02-24 00:00:00">2025-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 2-1  题目 输出所有形如 aabb 的 4 位完全平方数（即前两位数字相等，后两位数字也相等）。  解答 这个题目乍一看，有两种思路：  列举所有完全平方数，再找其中形如 aabb 的。 列举所有形如 aabb 的数，再找其中的完全平方数。  经过我的抉择，我选择了第一种思路 （绝对不是因为我不会判断一个数是否为完全平方数）  解答 1234567891011121314151617181920212223242526#include&lt;iostream&gt;using namespace std;int main()&#123;    for (int i = 1; ; i++)    &#123;        int allnum = i * i;        if (allnum &gt; 9999)        &#123;            break;        &#125;        int a1 = allnum / 1000;        int a2 = allnum / 100 - a1 * 10;   ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/22/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%B9%A0%E9%A2%98%E8%A7%A3%E7%AD%94/" title="算法竞赛入门经典 第一章习题解答">算法竞赛入门经典 第一章习题解答</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-21T21:00:00.000Z" title="发表于 2025-02-22 05:00:00">2025-02-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法竞赛入门经典 第一章习题解答  习题 1-1 平均数（average）  题目描述 输入3个整数，输出它们的平均值，保留3位小数。  解答 12345678910111213141516171819202122#include &lt;iostream&gt;using namespace std;float average(float a,float b,float c)&#123;    float sum,aver;    sum = a + b + c;    aver = sum / 3;    return aver;&#125;int main() &#123;    float a,b,c,ans;    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;    ans = average(a,b,c);    cout &lt;&lt; ans;    return 0;&#125; 太过于基础，不过多描述。  习题1-2 温度（temperature） ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/22/%E4%BE%8B%E9%A2%981-4/" title="算法入门经典 例题 1-4（鸡兔同笼）">算法入门经典 例题 1-4（鸡兔同笼）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-21T20:00:00.000Z" title="发表于 2025-02-22 04:00:00">2025-02-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 1-4（鸡兔同笼）  题目 鸡和兔总数量为 n，总腿数为 m。输入 n 和 m，依次输出鸡的数目和兔的数目。若无解，那么输出 No answer。  解答 这里开始上难度，但是鸡兔同笼是小学学的。。。 定义变量 j、t，分别表示鸡的数量、兔子的数量。 先来写出两个关系式：  j + t = n 2j + 4t = m  代入消元  t = (m-2n)/2  所以  j = n – t  并且，我们也要考虑，输入的 m、n 必须为正整数。 那么，我们可以写出以下代码： 12345678910111213141516171819202122232425262728#include &lt;iostream&gt;using namespace std;int main()&#123;    /*    n:总数量    m:总腿数    j:鸡数量    t:兔数量    */    int m,n,j,t;    cin &gt;&gt; n &gt;&gt; m;    t = (m - 2 * n) / 2;    j = n - t;    if...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/2024website/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/2024website/">1</a><a class="page-number" href="/2024website/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/2024website/page/4/#content-inner">4</a><a class="page-number" href="/2024website/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/2024website/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="author-info-name">林墨瀚</div><div class="author-info-description">「代码重构世界，逻辑解构真理」</div><div class="site-data"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LINMOH"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/LINMOH" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:linmhwork@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://user.qzone.qq.com/2113836986" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://space.bilibili.com/2126856300" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #hdhfbb;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🚚 网站迁移公告<br /> 亲爱的读者：<br /> 本站正在迁移至新框架，文章和评论数据同步中，部分内容可能暂时无法访问。<br /> ⏳ 预计一周内完成全部迁移，如有异常请通过 📧 邮箱反馈。<br /> 感谢你的理解与支持！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="焦虑的夜。"/></a><div class="content"><a class="title" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。">焦虑的夜。</a><time datetime="2025-05-21T16:24:48.000Z" title="发表于 2025-05-22 00:24:48">2025-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报"><img src="/2024website/img/top/4.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="五月月报"/></a><div class="content"><a class="title" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报">五月月报</a><time datetime="2025-05-16T16:00:00.000Z" title="发表于 2025-05-17 00:00:00">2025-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型"><img src="/2024website/img/top/6.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="第一节课讲义：认识 C++ 输入输出与基本变量类型"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型">第一节课讲义：认识 C++ 输入输出与基本变量类型</a><time datetime="2025-04-25T10:40:44.000Z" title="发表于 2025-04-25 18:40:44">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形"><img src="/2024website/img/top/8.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="P5725 【深基4.习8】求三角形"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形">P5725 【深基4.习8】求三角形</a><time datetime="2025-04-24T16:00:00.000Z" title="发表于 2025-04-25 00:00:00">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="排列组合"/></a><div class="content"><a class="title" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合">排列组合</a><time datetime="2025-04-02T14:51:17.000Z" title="发表于 2025-04-02 22:51:17">2025-04-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/2024website/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/C-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">C++语言学习</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/"><span class="card-category-list-name">《算法竞赛入门经典》</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">建站日记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%88%90%E9%95%BF%E6%9C%88%E5%BF%97/"><span class="card-category-list-name">成长月志</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%95%99%E5%AD%A6/"><span class="card-category-list-name">教学</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="card-category-list-name">数据结构</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%9D%82%E8%B0%88%E9%9B%86%E8%90%83/"><span class="card-category-list-name">杂谈集萃</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E7%A4%BE%E5%B7%A5%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95%EF%BC%88%E6%AF%8D%E4%BA%B2%E4%B8%93%E5%B1%9E%EF%BC%89/"><span class="card-category-list-name">社工初级考试（母亲专属）</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">18</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">21</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">47</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">43k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-25T16:57:01.525Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347);"><div id="footer-wrap"><div class="copyright">&copy;2025 By 林墨瀚</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>鲁ICP备2025142864号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/2024website/js/utils.js"></script><script src="/2024website/js/main.js"></script><script src="/2024website/js/tw_cn.js"></script><script src="/2024website/"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Go For It!","明天不一定会更好，但要坚信更好的明天一定会来。","要做的事情总找得出时间和机会，不愿意做的事情也总能找得出借口。","那些过去的眼泪终将风干在记忆里。","真相，是为了剿灭幻想。","我欲将心向明月，奈何明月照沟渠。","春风得意马蹄疾，一日看尽长安花。","天凉好个秋！","蒹葭苍苍，白露为霜；所谓伊人，在水一方。","数风流人物，还看今朝！"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Go For It!","明天不一定会更好，但要坚信更好的明天一定会来。","要做的事情总找得出时间和机会，不愿意做的事情也总能找得出借口。","那些过去的眼泪终将风干在记忆里。","真相，是为了剿灭幻想。","我欲将心向明月，奈何明月照沟渠。","春风得意马蹄疾，一日看尽长安花。","天凉好个秋！","蒹葭苍苍，白露为霜；所谓伊人，在水一方。","数风流人物，还看今朝！"])
+}
+typedJSFn.run(subtitleType)</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

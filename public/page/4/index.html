@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>技研录 - 林墨瀚の小站</title><meta name="author" content="林墨瀚"><meta name="copyright" content="林墨瀚"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="「代码重构世界，逻辑解构真理」">
+<meta property="og:type" content="website">
+<meta property="og:title" content="技研录">
+<meta property="og:url" content="https://linmoh.github.io/2024website/page/4/index.html">
+<meta property="og:site_name" content="技研录">
+<meta property="og:description" content="「代码重构世界，逻辑解构真理」">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://linmoh.github.io/2024website/img/touxiang.png">
+<meta property="article:author" content="林墨瀚">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://linmoh.github.io/2024website/img/touxiang.png"><link rel="shortcut icon" href="/2024website/img/favicon.png"><link rel="canonical" href="https://linmoh.github.io/2024website/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/2024website/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-FK40WW6GMW"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'G-FK40WW6GMW')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'G-FK40WW6GMW', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/2024website/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":300,"highlightFullpage":true,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":10,"languages":{"author":"作者: 林墨瀚","link":"链接: ","source":"来源: 技研录","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'Medium Zoom',
+  Snackbar: {"chs_to_cht":"已切换为繁体中文","cht_to_chs":"已切换为简体中文","day_to_night":"已切换为深色模式","night_to_day":"已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"bottom-left"},
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '技研录',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/2024website/atom.xml" title="技研录" type="application/atom+xml">
+</head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="site-data text-center"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/index_img.png);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/2024website/"><span class="site-name">技研录</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://map.linmohan.fun/"><i class="fa-fw fas fa-map"></i><span> 个人导航</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://home.linmohan.fun/"><i class="fa-fw fas fa-house-laptop"></i><span> 个人主页</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-blog"></i><span> 博客</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/2024website/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/2024website/movie/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li><li><a class="site-page child" href="/2024website/game/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li><li><a class="site-page child" href="/2024website/anime/"><i class="fa-fw fas fa-tv"></i><span> 番剧</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/2024website/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/2024website/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 说说</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-bars"></i><span> 关于</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/2024website/about/"><i class="fa-fw fas fa-address-card"></i><span> 我?</span></a></li><li><a class="site-page child" href="/2024website/aboutweb/"><i class="fa-fw fas fa-globe"></i><span> 这个网站</span></a></li><li><a class="site-page child" href="/2024website/lianxiwo/"><i class="fa-fw fas fa-user-friends"></i><span> 联系我</span></a></li></ul></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://www.travellings.cn/go.html"><i class="fa-fw fas fa-subway"></i><span> 开往</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">技研录</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/LINMOH" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:linmhwork@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://user.qzone.qq.com/2113836986" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://space.bilibili.com/2126856300" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #hdhfbb;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/22/%E4%BE%8B%E9%A2%981-3/" title="算法入门经典 例题 1-3">算法入门经典 例题 1-3</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-21T18:00:00.000Z" title="发表于 2025-02-22 02:00:00">2025-02-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 1-3 算法是思想的体操，竞赛是智慧的碰撞。  题目 输入两个整数 a 和 b，交换二者的值，然后输出。  解答 这一个例题甚至比上一个简单，解法直接使用经典的“三变量法”就行了。  解答 1234567891011121314#include &lt;iostream&gt;using namespace std;int main()&#123;    int a,n,m;    cin &gt;&gt; n &gt;&gt; m;        a = n;    n = m;    m = a;    cout &lt;&lt; n &lt;&lt; &quot; &quot; &lt;&lt; m;&#125; 过！ 祝各位读者早日成为神牛牪犇！ </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/21/%E4%BE%8B%E9%A2%981-2/" title="算法入门经典 例题 1-2">算法入门经典 例题 1-2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-20T17:00:00.000Z" title="发表于 2025-02-21 01:00:00">2025-02-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 1-2  题目 输入一个三位数，分离出它的百位、十位和个位，反转后输出。  解答 其实题目也很简单，难点在于如何分离出它百位、十位和个位。  百位 = n/100 十位 = n/10%10 个位 = n%10   解答 1234567891011121314151617181920212223#include &lt;iostream&gt;using namespace std;int exchange(int n)&#123;    int hundred,ten,one,a;    hundred = n / 100;    ten = n / 10 % 10;    one = n %  10;    a = one * 100 + ten * 10 + hundred;    return a;&#125;int main()&#123;    int n,ans;    cin &gt;&gt; n;    ans = exchange(n);    cout &lt;&lt; ans;    return...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/21/%E4%BE%8B%E9%A2%981-1/" title="算法入门经典 例题 1-1">算法入门经典 例题 1-1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-20T16:00:00.000Z" title="发表于 2025-02-21 00:00:00">2025-02-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/">《算法竞赛入门经典》</a></span></div><div class="content"> 算法入门经典 例题 1-1 好的，从今天开始，我将学习刘汝佳老师的《算法竞赛入门经典》，以便冲刺今年九月份的 CSP-J。  题目 输入底面半径 r 和高 h，输出圆柱体的表面积，保留3位小数。  样例输入： 13.5 9  样例输出： 1Area = 274.889  解答 由于题目过于简单，上过小学的人都会逻辑，所以没有分析。  初版解答 1234567891011121314151617181920#include &lt;iostream&gt;using namespace std;float area(r,h)&#123;    int s;    s = 2 * pi * r ** 2 + 2 * pi * r * h;    return s;&#125;int main()&#123;    int r,h,a;    cin &gt;&gt; r &gt;&gt; h;    a = area(r,h);    cout &lt;&lt; &quot;Area = &quot; &lt;&lt; a;    return...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/STL/" title="STL">STL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/C-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">C++语言学习</a></span></div><div class="content"> STL STL（Standard Template Library，标准模板库）是 C++ 标准库的一部分，提供了一组通用的、可重用的模板类和算法，用于处理常见的数据结构和操作。STL 通过提供高效、抽象和灵活的代码，使开发者能够更快速地实现常见的数据操作，而无需从头开始编写底层实现。 STL 的核心包括三部分：  容器（Containers）：用于存储和管理数据的对象。 算法（Algorithms）：用于操作容器数据的函数。 迭代器（Iterators）：用于遍历容器的对象，类似于指针。 函数对象（Function Objects）：即可调用的对象，通常与算法结合使用。   STL 的主要组成部分：  1. 容器（Containers） 容器是用于存储数据的对象，它们通过提供不同的结构（如数组、链表、哈希表等）来管理数据。STL 提供了多种容器，主要分为以下几类：  顺序容器（Sequence...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/vector%E5%90%91%E9%87%8F/" title="Vector 向量">Vector 向量</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/C-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">C++语言学习</a></span></div><div class="content"> Vector 向量 Vector 是一种动态数组，属于 STL 中的容器类之一，它提供了可以自动扩展大小的数组功能。与传统的数组不同，Vector 在需要时会自动调整大小，且支持快速访问、插入、删除等操作。  Vector 的特点：  动态大小：Vector 的大小是动态变化的，可以根据需要自动增长或缩小，避免了固定大小数组的限制。 按索引访问：可以像数组一样使用索引来访问 Vector 中的元素。 存储效率：Vector 会根据需要自动调整内部存储的大小，通常会预留一些额外空间来减少频繁的内存重新分配。 随机访问：支持快速随机访问，时间复杂度为 O(1)，就像数组一样。 支持常见操作：Vector 提供了许多常见的操作，如插入、删除、查找、排序等。   Vector 的优点：  灵活性：不需要事先知道容器的大小，可以动态调整。 效率：与数组相比，Vector 在元素插入和删除时表现更好，尤其是插入到末尾时。 内存管理：Vector 会根据需要自动调整内部容量，减少了内存浪费。   Vector 的缺点：  在中间插入和删除效率低：虽然插入和删除操作通常很高效，但在...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/%E4%BA%8C%E5%8F%89%E6%A0%91-Binary-Tree/" title="二叉树 Binary Tree">二叉树 Binary Tree</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content"> 二叉树 Binary Tree 二叉树是一种每个节点最多有两个子节点的树形数据结构。它是一种广泛应用于计算机科学中的数据结构，常用于表达层次结构、实现查找、排序、表达式求值等任务。  二叉树的基本定义：  节点：二叉树中的每个元素，通常包含数据和指向其子节点的指针。 根节点（Root）：二叉树的第一个节点，是树的起点。 子节点（Children）：每个节点可以有最多两个子节点，分别是左子节点和右子节点。 叶节点（Leaf）：没有任何子节点的节点，也叫终端节点。 父节点（Parent）：指向某一节点的上级节点。 深度（Depth）：从根节点到该节点的路径长度。 高度（Height）：从该节点到最远叶子节点的路径长度。   二叉树的基本类型  满二叉树（Full Binary Tree）：  每个节点要么没有子节点，要么有两个 子节点。 即，除了叶节点外，其他每个节点都有两个子节点。   完全二叉树（Complete Binary Tree）：  除了最后一层外，每一层的节点都尽可能多，且最后一层的节点都集中在左侧。   平衡二叉树（Balanced Binary...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/%E5%93%88%E5%B8%8C%E8%A1%A8-Hash-Table/" title="哈希表 Hash Table">哈希表 Hash Table</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content"> 哈希表 Hash Table 哈希表（Hash Table）是一种用于存储键值对（key-value pairs）的数据结构，它可以实现非常高效的查找、插入和删除操作。哈希表通过哈希函数将键映射到哈希表的索引位置，从而能在常数时间 O(1) 内完成查找、插入和删除操作。  哈希表的基本原理  哈希函数：哈希表通过哈希函数将键（key）映射到哈希表中的一个特定位置（即索引）。哈希函数的目标是尽可能将不同的键映射到不同的索引，以减少冲突。  哈希函数的一种常见实现方法是：hash(key) = key % table_size，这里的 table_size 是哈希表的大小。   冲突（Collision）：不同的键可能通过哈希函数计算后得到相同的哈希值，从而映射到同一个位置，这时就发生了冲突。解决冲突的常见方法有：  链式地址法（Separate Chaining）：每个哈希表的槽位（bucket）存储一个链表，冲突的元素存储在同一个链表中。 开放定址法（Open Addressing）：当发生冲突时，哈希表会尝试在表中寻找其他空位，直到找到一个空槽。   负载因子（Load...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/%E6%95%B0%E7%BB%84array/" title="数组 array">数组 array</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content"> 数组 array  数组的特点：  固定大小：数组在创建时必须指定大小，一旦定义，大小不能更改。这意味着，如果需要存储更多的数据，必须创建一个新的数组并复制数据。 元素类型相同：数组中的所有元素必须是相同类型的数据（如整数、字符、浮点数等）。 按索引访问：数组的每个元素都有一个唯一的索引，索引从0开始，允许直接访问任何元素。 连续内存：数组的元素在内存中是连续存储的，这使得数组具有较快的访问速度。   数组的缺点：  固定大小：数组一旦创建，其大小是固定的，无法动态扩展。如果数据量超出了原先设定的大小，必须重新分配更大的数组并复制数据，效率较低。 浪费内存：如果你事先定义的数组大小过大，可能会浪费内存空间；如果大小过小，可能会导致无法存储所有数据。 插入和删除效率低：数组中的元素是连续存储的，因此在数组中间插入或删除元素时，需要移动大量的数据，效率较低。   示例（C++）： 12345678910111213141516171819#include &lt;iostream&gt;using namespace std;int main() &#123;    //...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/%E6%A0%88stack/" title="栈 Stack">栈 Stack</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content"> 栈 Stack 栈（Stack）是一种线性数据结构，它遵循“后进先出”（LIFO，Last In First Out）原则，即最后加入的元素最先被取出。栈通常用于实现需要“反向”操作的算法和数据结构。  栈的特点：  后进先出（LIFO）：栈的访问顺序遵循后进先出的原则，最后插入的元素最先被移除。 操作限制：栈只允许在一端进行插入和删除操作，这一端通常被称为栈顶（Top）。 动态增长：栈可以根据需要动态地扩展或收缩（对于动态数组实现的栈）。 存储结构：栈可以使用数组或链表来实现。   栈的常见操作：  push：将一个元素添加到栈顶。 pop：移除栈顶元素，并返回该元素的值。 peek（或 top）：查看栈顶元素的值，但不移除它。 isEmpty：检查栈是否为空。 size：返回栈中元素的个数。  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024website/2025/02/18/%E9%93%BE%E8%A1%A8_Linked_List/" title="链表 Linked List">链表 Linked List</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-17T16:00:00.000Z" title="发表于 2025-02-18 00:00:00">2025-02-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="content"> 链表 Linked List 链表是一种线性数据结构，它由多个节点（Node）组成，每个节点包含两部分：  数据部分：存储实际的数据。 指针部分：存储指向下一个节点的地址。  链表的结构特点是节点在内存中不一定是连续存储的，而是通过指针将一个个节点连接起来。每个节点可以通过指针找到下一个节点，形成一个链式结构。  链表的类型：  单向链表（Singly Linked List）：每个节点只包含指向下一个节点的指针，最后一个节点的指针指向 null。 双向链表（Doubly Linked List）：每个节点包含两个指针，分别指向前一个节点和下一个节点，便于从两端遍历。 循环链表（Circular Linked List）：链表的最后一个节点的指针指向第一个节点，形成一个环。   链表的特点：  动态大小：链表大小可以动态调整，元素可以随时添加或删除，且不需要提前指定大小。 插入和删除操作高效：链表在任何位置的插入和删除都比数组更高效，因为只需要改变指针的指向即可。 访问不方便：链表的元素不是连续存储的，访问某个特定元素时需要从头遍历链表，效率较低。  ...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/2024website/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/2024website/">1</a><span class="space">&hellip;</span><a class="page-number" href="/2024website/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/2024website/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/2024website/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/2024website/img/touxiang.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="avatar"/></div><div class="author-info-name">林墨瀚</div><div class="author-info-description">「代码重构世界，逻辑解构真理」</div><div class="site-data"><a href="/2024website/archives/"><div class="headline">文章</div><div class="length-num">47</div></a><a href="/2024website/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/2024website/categories/"><div class="headline">分类</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/LINMOH"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/LINMOH" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:linmhwork@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://user.qzone.qq.com/2113836986" target="_blank" title="QQ"><i class="fa-brands fa-qq" style="color: #hdhfbb;"></i></a><a class="social-icon" href="https://space.bilibili.com/2126856300" target="_blank" title="Bilibili"><i class="fa-brands fa-bilibili" style="color: #hdhfbb;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">🚚 网站迁移公告<br /> 亲爱的读者：<br /> 本站正在迁移至新框架，文章和评论数据同步中，部分内容可能暂时无法访问。<br /> ⏳ 预计一周内完成全部迁移，如有异常请通过 📧 邮箱反馈。<br /> 感谢你的理解与支持！</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="焦虑的夜。"/></a><div class="content"><a class="title" href="/2024website/2025/05/22/%E7%84%A6%E8%99%91%E7%9A%84%E5%A4%9C%E3%80%82/" title="焦虑的夜。">焦虑的夜。</a><time datetime="2025-05-21T16:24:48.000Z" title="发表于 2025-05-22 00:24:48">2025-05-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报"><img src="/2024website/img/top/4.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="五月月报"/></a><div class="content"><a class="title" href="/2024website/2025/05/17/%E4%BA%94%E6%9C%88%E6%9C%88%E6%8A%A5/" title="五月月报">五月月报</a><time datetime="2025-05-16T16:00:00.000Z" title="发表于 2025-05-17 00:00:00">2025-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型"><img src="/2024website/img/top/6.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="第一节课讲义：认识 C++ 输入输出与基本变量类型"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/class1/" title="第一节课讲义：认识 C++ 输入输出与基本变量类型">第一节课讲义：认识 C++ 输入输出与基本变量类型</a><time datetime="2025-04-25T10:40:44.000Z" title="发表于 2025-04-25 18:40:44">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形"><img src="/2024website/img/top/8.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="P5725 【深基4.习8】求三角形"/></a><div class="content"><a class="title" href="/2024website/2025/04/25/p5725/" title="P5725 【深基4.习8】求三角形">P5725 【深基4.习8】求三角形</a><time datetime="2025-04-24T16:00:00.000Z" title="发表于 2025-04-25 00:00:00">2025-04-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合"><img src="/2024website/img/top/10.png" onerror="this.onerror=null;this.src='/2024website/img/friend_404.jpeg'" alt="排列组合"/></a><div class="content"><a class="title" href="/2024website/2025/04/02/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" title="排列组合">排列组合</a><time datetime="2025-04-02T14:51:17.000Z" title="发表于 2025-04-02 22:51:17">2025-04-02</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/2024website/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/C-%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/"><span class="card-category-list-name">C++语言学习</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E3%80%8A%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%E3%80%8B/"><span class="card-category-list-name">《算法竞赛入门经典》</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">建站日记</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%88%90%E9%95%BF%E6%9C%88%E5%BF%97/"><span class="card-category-list-name">成长月志</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%95%99%E5%AD%A6/"><span class="card-category-list-name">教学</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="card-category-list-name">数据结构</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E6%9D%82%E8%B0%88%E9%9B%86%E8%90%83/"><span class="card-category-list-name">杂谈集萃</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/2024website/categories/%E7%A4%BE%E5%B7%A5%E5%88%9D%E7%BA%A7%E8%80%83%E8%AF%95%EF%BC%88%E6%AF%8D%E4%BA%B2%E4%B8%93%E5%B1%9E%EF%BC%89/"><span class="card-category-list-name">社工初级考试（母亲专属）</span><span class="card-category-list-count">2</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/05/">
+            <span class="card-archive-list-date">
+              五月 2025
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">18</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">21</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/2024website/archives/2025/01/">
+            <span class="card-archive-list-date">
+              一月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">47</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">43k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-25T16:57:01.525Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347);"><div id="footer-wrap"><div class="copyright">&copy;2025 By 林墨瀚</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><span>鲁ICP备2025142864号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/2024website/js/utils.js"></script><script src="/2024website/js/main.js"></script><script src="/2024website/js/tw_cn.js"></script><script src="/2024website/"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["Go For It!","明天不一定会更好，但要坚信更好的明天一定会来。","要做的事情总找得出时间和机会，不愿意做的事情也总能找得出借口。","那些过去的眼泪终将风干在记忆里。","真相，是为了剿灭幻想。","我欲将心向明月，奈何明月照沟渠。","春风得意马蹄疾，一日看尽长安花。","天凉好个秋！","蒹葭苍苍，白露为霜；所谓伊人，在水一方。","数风流人物，还看今朝！"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["Go For It!","明天不一定会更好，但要坚信更好的明天一定会来。","要做的事情总找得出时间和机会，不愿意做的事情也总能找得出借口。","那些过去的眼泪终将风干在记忆里。","真相，是为了剿灭幻想。","我欲将心向明月，奈何明月照沟渠。","春风得意马蹄疾，一日看尽长安花。","天凉好个秋！","蒹葭苍苍，白露为霜；所谓伊人，在水一方。","数风流人物，还看今朝！"])
+}
+typedJSFn.run(subtitleType)</script></div><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
